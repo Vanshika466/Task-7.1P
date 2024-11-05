@@ -1,0 +1,122 @@
+/* Styles for the Sign-Up page */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.signup-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  text-align: left;
+  animation: slide-in 0.5s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.signup-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-box h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Input Label and Fields */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.signup-box input {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f4f6f8;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.signup-box input:focus {
+  border-color: #00aaff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 170, 255, 0.4);
+}
+/* Submit Button */
+.signup-box button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #00aaff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.signup-box button:hover {
+  background-color: #008ecc;
+  transform: translateY(-3px);
+}
+
+/* Footer Link */
+.link-back {
+  color: #00aaff;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.link-back:hover {
+  color: #008ecc;
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .signup-box {
+    padding: 25px;
+  }
+
+  .signup-box h2 {
+    font-size: 24px;
+  }
+
+  .signup-box input, .signup-box button {
+    font-size: 0.95rem;
+  }
+}
+
